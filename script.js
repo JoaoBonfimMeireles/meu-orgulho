@@ -29,22 +29,52 @@
 
 // console.log('gh', quantidade)
 
-let result = prompt('coloquei o numero:')
-let randomNumber = Math.round(Math.random() * 10)
+// let result = prompt('coloquei o numero:')
+// let randomNumber = Math.round(Math.random() * 10)
 
-let xAttempts = 0;
+// let xAttempts = 0;
 
-while (Number(result) != randomNumber) {
-    result = prompt('coloque outro numero: ')
-    xAttempts++
-}
+// while (Number(result) != randomNumber) {
+//     result = prompt('coloque outro numero: ')
+//     xAttempts++
+// }
 
-function quantidade() {
-    if (xAttempts > 1) {
-        return 'vezes'
-    } else {
-        return 'tentativa'
+// function quantidade() {
+//     if (xAttempts > 1) {
+//         return 'vezes'
+//     } else {
+//         return 'tentativa'
+//     }
+// }
+
+// alert(`boa em casa, foi em ${xAttempts} ${quantidade()}`)
+
+let item = []
+
+function pegarMenu() {
+    let menu = Number(prompt(`
+    ole o menu
+    1 fale
+    2 moste
+    3 saia!`))
+
+    if (menu === 1){
+    let itens = prompt("fale a fruta: ")
+    item.push(itens)
+    console.log('um', itens)
+    pegarMenu()
+    }
+    else if(menu === 2){
+    alert(item)
+    pegarMenu()
+    }
+    else if(menu === 3){
+    alert('tchau!!')
+    }
+    else{
+    return alert("vc colocou errado")
     }
 }
 
-alert(`boa em casa, foi em ${xAttempts} ${quantidade()}`)
+console.log('dois', item)
+pegarMenu()
