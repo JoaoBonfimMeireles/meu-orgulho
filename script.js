@@ -58,21 +58,25 @@ function pegarMenu() {
     2 moste
     3 saia!`))
 
-    if (menu === 1){
-    let itens = prompt("fale a fruta: ")
-    item.push(itens)
-    console.log('um', itens)
-    pegarMenu()
+    if (menu === 1) {
+        let itens = prompt("fale a fruta: ")
+        item.push(itens)
+        console.log('um', itens)
+        pegarMenu()
     }
-    else if(menu === 2){
-    alert(item)
-    pegarMenu()
+    else if (menu === 2) {
+        if (item.length >= 1) {
+            alert("Itens: " + item.join(" - "));
+            pegarMenu()
+        }else {
+            alert('não tem nada aqui')
+        }
     }
-    else if(menu === 3){
-    alert('tchau!!')
+    else if (menu === 3) {
+        alert('tchau!!')
     }
-    else{
-    return alert("vc colocou errado")
+    else {
+        return alert("vc colocou errado e os nomes até o momento é " + item)
     }
 }
 
