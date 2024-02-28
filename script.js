@@ -49,36 +49,89 @@
 
 // alert(`boa em casa, foi em ${xAttempts} ${quantidade()}`)
 
-let item = []
+// let item = []
 
-function pegarMenu() {
-    let menu = Number(prompt(`
-    ole o menu
-    1 fale
-    2 moste
-    3 saia!`))
+// function pegarMenu() {
+//     let menu = Number(prompt(`
+//     ole o menu
+//     1 fale
+//     2 moste
+//     3 saia!`))
 
-    if (menu === 1) {
-        let itens = prompt("fale a fruta: ")
-        item.push(itens)
-        console.log('um', itens)
-        pegarMenu()
-    }
-    else if (menu === 2) {
-        if (item.length >= 1) {
-            alert("Itens: " + item.join(" - "));
-            pegarMenu()
-        }else {
-            alert('não tem nada aqui')
-        }
-    }
-    else if (menu === 3) {
-        alert('tchau!!')
-    }
-    else {
-        return alert("vc colocou errado e os nomes até o momento é " + item)
-    }
+//     if (menu === 1) {
+//         let itens = prompt("fale a fruta: ")
+//         item.push(itens)
+//         console.log('um', itens)
+//         pegarMenu()
+//     }
+//     else if (menu === 2) {
+//         if (item.length >= 1) {
+//             alert("Itens: " + item.join(" - "));
+//             pegarMenu()
+//         }else {
+//             alert('não tem nada aqui')
+//         }
+//     }
+//     else if (menu === 3) {
+//         alert('tchau!!')
+//     }
+//     else {
+//         return alert("vc colocou errado e os nomes até o momento é " + item)
+//     }
+// }
+
+// console.log('dois', item)
+// pegarMenu()
+
+// while (true) {
+//     let option = Number(prompt(`
+// numeros 
+// 1
+// 2
+// 3
+// `))
+
+// let item = []
+
+// switch(option) {
+//     case 1: {
+//         let caseOne = prompt('fruta? ')
+//         item.push(caseOne)
+//         break
+
+//     }
+//     case 2: {
+//         alert(item)
+//     }
+//     case 3: {
+//         break
+//     }
+// }
+
+// console.log('1', item)
+// }
+
+let patients = [
+    {
+        name: "João",
+        idade: 23,
+        weight: 180,
+        height: 181
+    },
+    {name: "paulo",},
+    {name: "welligton",}]
+
+    console.log('1', patients[0])
+
+let patientsNames = []
+
+// for(let i = 0; i < patients.length; i++) {
+//     patientsNames[i] = patients[i].name
+// }
+
+for(let i of patients) {
+    patientsNames.push(i.name)
 }
 
-console.log('dois', item)
-pegarMenu()
+alert(patientsNames)
+// alert(patientsNames)
