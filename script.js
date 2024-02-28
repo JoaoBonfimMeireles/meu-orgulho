@@ -116,22 +116,42 @@ let patients = [
         name: "João",
         idade: 23,
         weight: 180,
-        height: 181
+        height: 1.81
     },
-    {name: "paulo",},
-    {name: "welligton",}]
+    {name: "paulo",
+    idade: 23,
+    weight: 50,
+    height: 1.21},
+    {name: "welligton",
+    idade: 23,
+    weight: 90,
+    height: 1.91}]
 
     console.log('1', patients[0])
 
-let patientsNames = []
+// let patientsNames = []
 
-// for(let i = 0; i < patients.length; i++) {
-//     patientsNames[i] = patients[i].name
+// // for(let i = 0; i < patients.length; i++) {
+// //     patientsNames[i] = patients[i].name
+// // }
+
+// for(let i of patients) {
+//     patientsNames.push(i.name)
 // }
 
-for(let i of patients) {
-    patientsNames.push(i.name)
+// alert(patientsNames)
+// // alert(patientsNames)
+
+
+function calcIMC(item) {
+
+    alert(`
+    olá ${item.name} o seu IMC é ${
+        (((item.weight) / (item.height **2)).toFixed(2))
+    }`)
 }
 
-alert(patientsNames)
-// alert(patientsNames)
+
+for(let i of patients){
+    calcIMC(i)
+}
