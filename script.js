@@ -4,6 +4,7 @@
 // let type = Number(prompt('fale o número? '))
 // let types = [type]
 
+
 // console.log("1", type)
 
 // function conferir() {
